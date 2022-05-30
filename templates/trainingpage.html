@@ -1,0 +1,93 @@
+{% extends "base.html"%}
+
+{% block base%}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <button type="button" class="btn btn-primary" id="train">Train Model</button>
+            </div>
+            <div class="row">
+                <p>Click on the above button to start Training Process.</p>
+            </div>
+            <div class="row">
+                <textarea id="TrainResults" name="TrainResult" rows=20 cols=60></textarea>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <button type="button" class="btn btn-primary" id="stopFetchingLog">Stop Fetching Log</button>
+            </div>
+            <div class="row">
+                <p>Training log will be displayed here.</p>
+            </div>
+            <div class="row">
+                <textarea id="Predinfo" name="Predinfo" rows=20 cols=70></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var timer;
+
+    function loadinfolog () {
+        $.ajax({
+            //change url below
+            url: "/fetchinfo",
+            success: function (response) {
+                Predinfo.innerHTML = response;
+            }
+        });
+    }
+
+    function train() {
+        timer = setInterval(function () {
+            loadinfolog();
+        }, 5000);
+
+        console.log("test")
+        //preventDefault();
+        $('#loading').show();
+        $.ajax({
+            //change url below
+            url: "/train",
+            type: "POST",
+            success: function (response) {
+                PredResult.innerHTML = response;
+                //$(".json-result").html('<p>"Prediction File created !!!</p><pre>' + response + '</pre>');
+                $('#loading').hide();
+            }
+        });
+    }
+
+    function stopFetchingLog() {
+        clearInterval(timer);
+    }
+
+
+
+    $(document).ready(function () {
+        $('#loading').hide();
+        $("#train").click(function (e) {
+            train()
+        });
+        $("#stopFetchingLog").click(function (e) {
+            stopFetchingLog()
+        });
+
+/*
+    window.onunload = function () {
+        clearInterval(timer);
+        alert('test');
+    };
+    
+    document.getElementById("demo").onclick = function() {myFunction()};
+*/
+
+    });
+
+</script>
+
+{% endblock%}

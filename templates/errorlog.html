@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+
+{% block base%}
+
+<p>
+    <span style="white-space: pre-line">{{logtext}}</span>
+</p>
+
+<form action="{{url_for('deleteerrorlog')}}">
+    <input type="submit" value="Clear">
+</form>
+
+
+{% endblock%}

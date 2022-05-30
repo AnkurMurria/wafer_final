@@ -1,0 +1,39 @@
+{% extends "base.html"%}
+
+{% block base%}
+
+<div>
+    <br>
+    <h5>Welcome to wafer Fault Detection</h5>
+    <p>A wafer (also called a slice or substrate)[1] is a thin slice of semiconductorused for the fabrication of 
+        integrated circuits and, in photovoltaics, to manufacture solar cells. The wafer serves as the substrate 
+        for microelectronic devices built in and upon the wafer. It undergoes many microfabrication processes, 
+        such as doping, ion implantation, etching, thin-film deposition of various materials, 
+        and photolithographic patterning. Finally, the individual microcircuits are separated by wafer 
+        dicing and packaged as an integrated circuit.</p>
+    
+        <img src="../static/wafer.png" width="400" height="300" alt="wafer">
+    <h6>Silicon Wafer Applications:</h6>
+    <ul>
+        <li>Computers and PC’s</li>
+        <li>Smartphone, Tablets, Wearable’s</li>
+        <li>Automobiles, Drones and Aerospace Industry</li>
+        <li>Home Appliances</li>
+        <li>Self-Driving Cars, Robotics, Integrated Circuits</li>
+    </ul>
+    
+
+    <h6>Requirement:</h6>
+    <p>
+        The client will send data in multiple sets of files in batches at a given location. Data will contain Wafer names and 590 columns of different sensor values for each wafer. The last column will have the "Good/Bad" value for each wafer.
+"Good/Bad" column will have two unique values +1 and -1.
+"+1" represents Good wafer.
+"-1" represents Bad Wafer.
+
+    </p>
+
+</div>
+
+
+
+{% endblock%}

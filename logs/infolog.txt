@@ -1,0 +1,29 @@
+2022-05-30 19:23:08.315 -- loaded the schema
+2022-05-30 19:23:08.319 -- Deleted folder
+2022-05-30 19:23:08.322 -- Deleted folder
+2022-05-30 19:23:08.324 -- created folder
+2022-05-30 19:23:08.325 -- created folder
+2022-05-30 19:23:08.362 -- validated file names
+2022-05-30 19:23:09.285 -- validated Number of columns
+2022-05-30 19:23:12.421 -- validated blank columns
+2022-05-30 19:23:14.924 -- Replaced missing values with NULL
+2022-05-30 19:23:14.925 -- Connected to db
+2022-05-30 19:23:14.945 -- Created table
+2022-05-30 19:23:14.946 -- Connected to db
+2022-05-30 19:23:21.906 -- Inserted data into table
+2022-05-30 19:23:21.907 -- Connected to db
+2022-05-30 19:23:22.770 -- Created CSV
+2022-05-30 19:23:22.778 -- Created new csv
+2022-05-30 19:23:22.882 -- Loaded Data
+2022-05-30 19:23:22.888 -- Null check completed
+2022-05-30 19:23:24.826 -- Null's imputed
+2022-05-30 19:23:27.619 -- getDummyColums
+2022-05-30 19:23:27.622 -- Dropped Columns
+2022-05-30 19:23:27.623 -- Model loaded
+2022-05-30 19:23:27.795 -- Model name found
+2022-05-30 19:23:27.796 -- Model loaded
+2022-05-30 19:23:27.823 -- Model name found
+2022-05-30 19:23:27.824 -- Model loaded
+2022-05-30 19:23:27.851 -- Model name found
+2022-05-30 19:23:27.852 -- Model loaded
+2022-05-30 19:23:27.865 -- Prediction Done
